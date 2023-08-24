@@ -47,6 +47,53 @@
     }
 }
 
+.photosTask {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__photo {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h1 {
+            color: white;
+            font-size: 18px;
+            padding-bottom: 10px;
+        }
+
+        img {
+            max-width: 200px;
+            max-height: 145px;
+
+        }
+    }
+}
+
+.historyTask {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        max-width: 350px;
+        color: white;
+        font-size: 24px;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    p {
+        color: $text-lightgray;
+        text-overflow: ellipsis;
+
+    }
+}
+
+
+
 
 .aboutContent__decorBgLeft {
     position: absolute;

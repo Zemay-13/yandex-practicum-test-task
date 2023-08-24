@@ -1,0 +1,67 @@
+@import "../../styles/mixins.scss";
+
+
+
+.card {
+    background-color: rgba(51, 62, 81, 0.70);
+    margin: 0 15px 0 15px;
+    position: relative;
+    border-radius: 30px;
+    padding: 30px;
+
+
+
+    @include tablet {
+        padding: 0 60px 0 30px;
+    }
+
+    @include tablet-min {
+        padding: 0 40px 0 20px;
+    }
+
+    @include phone {
+        max-width: 320px;
+        top: 0;
+        left: 0;
+    }
+
+    &__decorBg {
+        max-width: 200px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-radius: 0 30px 30px 30px;
+
+        @include tablet-min {
+            max-width: 300px;
+        }
+    }
+
+    &__close {
+        cursor: pointer;
+        position: absolute;
+        top: 30px;
+        right: 40px;
+        color: white;
+        width: 45px;
+        z-index: 12;
+
+        @include tablet {
+            top: 10px;
+            width: 40px;
+            right: 30px;
+        }
+
+        @include tablet-min {
+            top: 10px;
+            width: 30px;
+            right: 20px;
+        }
+
+        @include phone {
+            top: 16px;
+            width: 34px;
+            right: 16px;
+        }
+    }
+}

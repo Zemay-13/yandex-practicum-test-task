@@ -3,7 +3,7 @@ import LinkCard from "./linkCard/LinkCard";
 import { useState } from "react";
 import styles from "./HomeContent.module.scss";
 const HomeContent = () => {
-  const [openForm, setOpenForm] = useState(false);
+  const [openLink, setOpenLink] = useState(false);
   return (
     <>
       <div className={styles.hс}>
@@ -22,7 +22,7 @@ const HomeContent = () => {
           </h2>
 
           <button
-            onClick={() => setOpenForm(true)}
+            onClick={() => setOpenLink(true)}
             className={styles.containerContent__button}
           >
             Ссылка на репозиторий приложения
@@ -30,7 +30,7 @@ const HomeContent = () => {
         </div>
         <img src={homeImg} alt="man" className={styles.hc__img} />
       </div>
-      {openForm && <LinkCard onClose={() => setOpenForm(false)} />}
+      {openLink && <LinkCard onClose={() => setOpenLink(false)} />}
     </>
   );
 };
