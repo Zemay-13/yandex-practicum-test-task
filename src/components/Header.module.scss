@@ -1,0 +1,129 @@
+@import"../styles/base.scss";
+@import"../styles/mixins.scss";
+
+
+
+.header {
+    margin: 30px 0 100px 0;
+    max-width: 1280px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include desktop {
+        margin: 30px 0 150px 0;
+    }
+
+    @include tablet-min {
+        margin: 30px 0 48px 0;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        img {
+            max-width: 128px;
+            max-height: 55px;
+
+            @include tablet {
+                max-width: 100px
+            }
+
+            @include tablet-min {
+                max-width: 140px;
+            }
+
+            @include phone {
+                width: 89px;
+            }
+        }
+
+        h1 {
+            color: #FFF;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 24px;
+        }
+
+
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.container__nav {
+    display: flex;
+    gap: 105px;
+
+    @include tablet {
+        gap: 30px;
+
+        a {
+            font-size: 18px;
+        }
+    }
+
+    @include tablet-min {
+        display: none;
+    }
+
+
+    a {
+        color: $text-lightgray;
+        font-size: 23px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+        transition: 0.3s ease;
+
+        &:hover {
+            color: #C3F33B;
+        }
+
+    }
+
+}
+
+
+
+.header__burger {
+    display: none;
+    color: white;
+
+    .burger__menu {
+        width: 60px;
+        height: 3px;
+        margin-bottom: 13px;
+        background-color: #FBF7FE;
+        border-radius: 10px;
+
+        @include phone {
+            max-width: 40px;
+            margin-bottom: 10px;
+
+        }
+
+    }
+
+    .burger__close {
+        width: 60px;
+
+        @include phone {
+            max-width: 40px;
+            max-height: 10px;
+        }
+    }
+
+    @include tablet-min {
+        display: flex;
+    }
+
+
+}
